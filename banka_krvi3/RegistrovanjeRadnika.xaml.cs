@@ -30,7 +30,7 @@ namespace banka_krvi3
 
         private void RegistrovanjeRadnikaRegistrujButton_Click(object sender, RoutedEventArgs e)
         {
-            if (RegistrvanjeRadnikaImeTextBox.Text.Length == 0 || RegistrovanjeRadnikaPrezimeTextBox.Text.Length == 0 || RegistrovanjeRadnikaDatumRodjenjaTextBox.Text.Length == 0 || RegistrovanjeRadnikaEmailAdresaTextBox.Text.Length == 0 || RegistrovanjeRadnikaKorisnickoImeTextBox.Text.Length == 0 || RegistrovanjeRadnikaSifraTextBox.Text.Length == 0)
+            if (RegistrovanjeRadnikaImeTextBox.Text.Length == 0 || RegistrovanjeRadnikaPrezimeTextBox.Text.Length == 0 || RegistrovanjeRadnikaDatumRodjenjaTextBox.Text.Length == 0 || RegistrovanjeRadnikaEmailAdresaTextBox.Text.Length == 0 || RegistrovanjeRadnikaKorisnickoImeTextBox.Text.Length == 0 || RegistrovanjeRadnikaSifraTextBox.Text.Length == 0)
             {
                 MessageBox.Show("Popunite sva polja!");
             }
@@ -38,11 +38,26 @@ namespace banka_krvi3
                 MySqlConnection connection = new MySqlConnection(MyConString);
                 connection.Open();
 
-                string query = "insert into korisnik(Ime, Prezime, DatumRodjenja, Email, KorisnickoIme, Sifra) values ('"+ RegistrvanjeRadnikaImeTextBox + "', '"+ RegistrovanjeRadnikaPrezimeTextBox + "', '"+ RegistrovanjeRadnikaEmailAdresaTextBox + "', '"+ RegistrovanjeRadnikaEmailAdresaTextBox + "', '"+ RegistrovanjeRadnikaSifraTextBox + "')";
+                string query = "insert into korisnik (Ime, Prezime, DatumRodjenja, Email, KorisnickoIme, Sifra) values ('"+ RegistrovanjeRadnikaImeTextBox.Text + "', '"+ RegistrovanjeRadnikaPrezimeTextBox.Text + "', '"+ RegistrovanjeRadnikaDatumRodjenjaTextBox.Text + "', '"+ RegistrovanjeRadnikaEmailAdresaTextBox.Text + "', '"+ RegistrovanjeRadnikaKorisnickoImeTextBox.Text + "', '"+ RegistrovanjeRadnikaSifraTextBox.Text + "')";
                 MySqlCommand cmdSel = new MySqlCommand(query, connection);
                 var queryResult1 = cmdSel.ExecuteNonQuery();
                 connection.Close();
+
+                MessageBox.Show("Radnik uspesno registrovan!");
+
+                RegistrovanjeRadnikaImeTextBox.Text = "";
+                RegistrovanjeRadnikaPrezimeTextBox.Text = "";
+                RegistrovanjeRadnikaDatumRodjenjaTextBox.Text = "";
+                RegistrovanjeRadnikaEmailAdresaTextBox.Text = "";
+                RegistrovanjeRadnikaKorisnickoImeTextBox.Text = "";
+                RegistrovanjeRadnikaSifraTextBox.Text = "";
             }
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var MainWindow = new MainWindow();
+            MainWindow.Show();
         }
     }
 }

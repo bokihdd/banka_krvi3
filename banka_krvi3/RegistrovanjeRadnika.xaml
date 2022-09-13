@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:banka_krvi3"
         mc:Ignorable="d"
-        Title="RegistrovanjeRadnika" Height="420" Width="400">
+        Title="RegistrovanjeRadnika" Height="420" Width="400" Closed="Window_Closed">
     <Grid Margin="0,0,10,5">
         <Label Content="Registrovanje radnika" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20"/>
         <Label Content="Ime :" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontSize="16"/>
-        <TextBox x:Name="RegistrvanjeRadnikaImeTextBox" HorizontalAlignment="Left" Margin="54,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaImeTextBox" HorizontalAlignment="Left" Margin="54,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="16"/>
         <Label Content="Prezime :" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox x:Name="RegistrovanjeRadnikaPrezimeTextBox" HorizontalAlignment="Left" Margin="89,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16"/>
         <Label Content="Datum rodjenja :" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" FontSize="16"/>

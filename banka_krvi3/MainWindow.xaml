@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:banka_krvi3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="550">
+        Title="MainWindow" Height="450" Width="550" Closed="Window_Closed">
     <Grid Background="#FFDA1A1A">
         <Label x:Name="lblIme" Content="Korisnicko ime:" HorizontalAlignment="Left" Height="46" Margin="45,176,0,0" VerticalAlignment="Top" Width="158" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.247,0.579"/>
         <Label x:Name="lblIme_Copy" Content="Sifra:" HorizontalAlignment="Left" Height="44" Margin="139,256,0,0" VerticalAlignment="Top" Width="64" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.656,0.433"/>

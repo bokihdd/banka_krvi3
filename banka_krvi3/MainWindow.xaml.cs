@@ -39,5 +39,10 @@ namespace banka_krvi3
             this.Visibility= Visibility.Hidden;
             prozor.Show();
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }
