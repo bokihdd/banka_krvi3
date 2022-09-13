@@ -59,15 +59,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BrisanjeNaloga.xaml.cs">
+      <DependentUpon>BrisanjeNaloga.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GlavniOpcioniMeni.xaml.cs">
       <DependentUpon>GlavniOpcioniMeni.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KorisnikInformacije.cs" />
     <Compile Include="ListaRadnika.xaml.cs">
       <DependentUpon>ListaRadnika.xaml</DependentUpon>
     </Compile>
     <Compile Include="RegistrovanjeRadnika.xaml.cs">
       <DependentUpon>RegistrovanjeRadnika.xaml</DependentUpon>
     </Compile>
+    <Page Include="BrisanjeNaloga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GlavniOpcioniMeni.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -16,6 +17,7 @@ using System.Windows.Shapes;
 
 using MySql.Data.MySqlClient;
 
+
 namespace banka_krvi3
 {
     /// <summary>
@@ -27,6 +29,7 @@ namespace banka_krvi3
         {
             InitializeComponent();
         }
+        
 
         string MyConString = "SERVER=127.0.0.1;" + "DATABASE=bankakrvi;" + "UID=root;" + "PASSWORD=root03102000;";
 
@@ -60,6 +63,7 @@ namespace banka_krvi3
 
                 string username = txtIme.Text;
                 string password = txtSifra.Text;
+                
 
                 try
                 {
@@ -72,12 +76,29 @@ namespace banka_krvi3
 
                     if (dt.Rows.Count > 0)
                     {
-                        username = txtIme.Text;
-                        password = txtSifra.Text;
+                        //username = txtIme.Text;
+                       // password = txtSifra.Text;
 
+                        KorisnikInformacije.setKorisnickoIme("KorisnikI", txtIme.Text);
+                        KorisnikInformacije.setSifra("KorisnikS", txtSifra.Text);
+
+                        
+
+                        
                         GlavniOpcioniMeni prozor = new GlavniOpcioniMeni();
                         this.Visibility = Visibility.Hidden;
                         prozor.Show();
+
+                       
+
+                        
+
+
+
+
+
+
+
                     }
                     else {
                         MessageBox.Show("Pogresno korisnicko ime ili sifra!");

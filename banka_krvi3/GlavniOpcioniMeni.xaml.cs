@@ -29,5 +29,12 @@ namespace banka_krvi3
             var MainWindow = new MainWindow();
             MainWindow.Show();
         }
+
+        private void ObrisiNalogButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var BrisanjeNaloga = new BrisanjeNaloga();
+            BrisanjeNaloga.Show();
+        }
     }
 }
