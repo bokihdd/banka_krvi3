@@ -60,7 +60,5 @@ namespace banka_krvi3
             var PregledDonora = new PregledDonora();
             PregledDonora.Show();
         }
-
-        
     }
 }
