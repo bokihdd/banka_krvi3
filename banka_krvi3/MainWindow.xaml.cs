@@ -24,5 +24,20 @@ namespace banka_krvi3
         {
             InitializeComponent();
         }
+
+        private void btnReg_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrovanjeRadnika prozor = new RegistrovanjeRadnika();
+            this.Visibility = Visibility.Hidden;
+            prozor.Show();
+                    
+        }
+
+        private void btnLista_Click(object sender, RoutedEventArgs e)
+        {
+            ListaRadnika prozor = new ListaRadnika();
+            this.Visibility= Visibility.Hidden;
+            prozor.Show();
+        }
     }
 }

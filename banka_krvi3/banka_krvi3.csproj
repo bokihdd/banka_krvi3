@@ -59,9 +59,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ListaRadnika.xaml.cs">
+      <DependentUpon>ListaRadnika.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrovanjeRadnika.xaml.cs">
       <DependentUpon>RegistrovanjeRadnika.xaml</DependentUpon>
     </Compile>
+    <Page Include="ListaRadnika.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

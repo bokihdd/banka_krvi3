@@ -7,9 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="550">
     <Grid Background="#FFDA1A1A">
-        <Label x:Name="lblIme" Content="Korisnicko ime:" HorizontalAlignment="Left" Height="45" Margin="28,177,0,0" VerticalAlignment="Top" Width="158" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.247,0.579"/>
-        <Label x:Name="lblIme_Copy" Content="Sifra:" HorizontalAlignment="Left" Height="44" Margin="122,256,0,0" VerticalAlignment="Top" Width="64" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold"/>
-        <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="34" Margin="186,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18"/>
-        <TextBox x:Name="txtSifra" HorizontalAlignment="Left" Height="34" Margin="186,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18"/>
+        <Label x:Name="lblIme" Content="Korisnicko ime:" HorizontalAlignment="Left" Height="46" Margin="45,176,0,0" VerticalAlignment="Top" Width="158" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.247,0.579"/>
+        <Label x:Name="lblIme_Copy" Content="Sifra:" HorizontalAlignment="Left" Height="44" Margin="139,256,0,0" VerticalAlignment="Top" Width="64" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.656,0.433"/>
+        <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="34" Margin="203,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18"/>
+        <TextBox x:Name="txtSifra" HorizontalAlignment="Left" Height="34" Margin="203,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18" RenderTransformOrigin="0.516,0.531"/>
+        <Button x:Name="btnReg" Content="Registruj radnika" HorizontalAlignment="Left" Margin="372,38,0,0" VerticalAlignment="Top" Height="41" Width="152" FontFamily="Yu Gothic" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Click="btnReg_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.166"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="btnLista" Content="Lista radnika" HorizontalAlignment="Left" Margin="24,38,0,0" VerticalAlignment="Top" Height="41" Width="152" FontFamily="Yu Gothic" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.489,1.489" Click="btnLista_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.166"/>
+                    <TranslateTransform X="0.118" Y="0.005"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
     </Grid>
 </Window>
