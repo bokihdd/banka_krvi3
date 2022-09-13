@@ -72,6 +72,9 @@
     <Compile Include="PregledDonora.xaml.cs">
       <DependentUpon>PregledDonora.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PregledPacijenata.xaml.cs">
+      <DependentUpon>PregledPacijenata.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegistrovanjeDonora.xaml.cs">
       <DependentUpon>RegistrovanjeDonora.xaml</DependentUpon>
     </Compile>
@@ -103,6 +106,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PregledDonora.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PregledPacijenata.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
