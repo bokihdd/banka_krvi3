@@ -1,0 +1,26 @@
+﻿<Window x:Class="banka_krvi3.RegistrovanjeRadnika"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:banka_krvi3"
+        mc:Ignorable="d"
+        Title="RegistrovanjeRadnika" Height="420" Width="400">
+    <Grid Margin="0,0,10,5">
+        <Label Content="Registrovanje radnika" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Ime :" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrvanjeRadnikaImeTextBox" HorizontalAlignment="Left" Margin="54,76,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="16"/>
+        <Label Content="Prezime :" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaPrezimeTextBox" HorizontalAlignment="Left" Margin="89,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" FontSize="16"/>
+        <Label Content="Datum rodjenja :" HorizontalAlignment="Left" Margin="10,144,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaDatumRodjenjaTextBox" HorizontalAlignment="Left" Margin="141,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" FontSize="16"/>
+        <Label Content="E-mail adresa :" HorizontalAlignment="Left" Margin="10,180,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaEmailAdresaTextBox" HorizontalAlignment="Left" Margin="128,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233" FontSize="16"/>
+        <Label Content="Korisnicko ime :" HorizontalAlignment="Left" Margin="10,216,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaKorisnickoImeTextBox" HorizontalAlignment="Left" Margin="135,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="226" FontSize="16"/>
+        <Label Content="Sifra :" HorizontalAlignment="Left" Margin="10,252,0,0" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:Name="RegistrovanjeRadnikaSifraTextBox" HorizontalAlignment="Left" Margin="64,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="297" FontSize="16"/>
+        <Button x:Name="RegistrovanjeRadnikaRegistrujButton" Content="Registruj" HorizontalAlignment="Left" Margin="108,311,0,0" VerticalAlignment="Top" Width="200" Height="65" FontSize="20" Click="RegistrovanjeRadnikaRegistrujButton_Click"/>
+
+    </Grid>
+</Window>
