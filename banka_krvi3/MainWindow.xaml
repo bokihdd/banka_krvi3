@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:banka_krvi3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="550">
+    <Grid Background="#FFDA1A1A">
+        <Label x:Name="lblIme" Content="Korisnicko ime:" HorizontalAlignment="Left" Height="45" Margin="28,177,0,0" VerticalAlignment="Top" Width="158" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold" RenderTransformOrigin="0.247,0.579"/>
+        <Label x:Name="lblIme_Copy" Content="Sifra:" HorizontalAlignment="Left" Height="44" Margin="122,256,0,0" VerticalAlignment="Top" Width="64" FontSize="20" FontFamily="Yu Gothic" FontWeight="Bold"/>
+        <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="34" Margin="186,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18"/>
+        <TextBox x:Name="txtSifra" HorizontalAlignment="Left" Height="34" Margin="186,261,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="192" FontFamily="Yu Gothic" FontSize="18"/>
     </Grid>
 </Window>
