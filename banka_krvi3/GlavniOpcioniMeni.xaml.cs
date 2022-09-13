@@ -44,5 +44,21 @@ namespace banka_krvi3
             RegistrovanjeDonora.Show();
 
         }
+
+        private void IzlogujSeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var MainWindow = new MainWindow();
+            MainWindow.Show();
+
+        }
+
+       
+
+        private void PregledDonoraButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var PregledDonora = new PregledDonora();
+            PregledDonora.Show();
+        }
     }
 }
