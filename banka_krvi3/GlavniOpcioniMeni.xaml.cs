@@ -36,5 +36,13 @@ namespace banka_krvi3
             var BrisanjeNaloga = new BrisanjeNaloga();
             BrisanjeNaloga.Show();
         }
+
+        private void RegistrujDonoraButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var RegistrovanjeDonora = new RegistrovanjeDonora();
+            RegistrovanjeDonora.Show();
+
+        }
     }
 }
