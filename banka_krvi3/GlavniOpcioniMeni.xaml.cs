@@ -26,8 +26,7 @@ namespace banka_krvi3
 
         private void Window_Closed(object sender, EventArgs e)
         {
-            var MainWindow = new MainWindow();
-            MainWindow.Show();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void ObrisiNalogButton_Click(object sender, RoutedEventArgs e)
@@ -59,6 +58,23 @@ namespace banka_krvi3
             this.Hide();
             var PregledDonora = new PregledDonora();
             PregledDonora.Show();
+        }
+
+
+        
+
+        private void btnRegPacijenta_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrovanjePacijenta prozor = new RegistrovanjePacijenta();
+            this.Visibility = Visibility.Hidden;
+            prozor.Show();
+        }
+
+        private void PregledPacijenataButton_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            var PregledPacijenata = new PregledPacijenata();
+            PregledPacijenata.Show();
         }
     }
 }

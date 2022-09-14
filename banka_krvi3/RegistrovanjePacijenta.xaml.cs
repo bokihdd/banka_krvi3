@@ -60,5 +60,11 @@ namespace banka_krvi3
                 }
             }
         }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            var GlavniOpcioniMeni = new GlavniOpcioniMeni();
+            GlavniOpcioniMeni.Show();
+        }
     }
 }
