@@ -83,5 +83,12 @@ namespace banka_krvi3
             this.Visibility = Visibility.Hidden;
             prozor.Show();
         }
+
+        private void btnPregledDonacija_Click(object sender, RoutedEventArgs e)
+        {
+            PregledDonacija prozor = new PregledDonacija();
+            this.Visibility= Visibility.Hidden;
+            prozor.Show();
+        }
     }
 }

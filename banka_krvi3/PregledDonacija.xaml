@@ -1,0 +1,12 @@
+﻿<Window x:Class="banka_krvi3.PregledDonacija"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:banka_krvi3"
+        mc:Ignorable="d"
+        Title="PregledDonacija" Height="300" Width="800" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Grid>
+        <DataGrid x:Name="dtDonacija" HorizontalAlignment="Center" Height="199" Margin="0,75,0,0" VerticalAlignment="Top" Width="780"/>
+    </Grid>
+</Window>
