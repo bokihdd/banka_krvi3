@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
 
 namespace banka_krvi3
 {
@@ -32,7 +33,7 @@ namespace banka_krvi3
 
         private void btnReg_Click(object sender, RoutedEventArgs e)
         {
-            string connectionString = @"Data Source=DESKTOP-RB5QU9U\SQLEXPRESS; Initial Catalog=bankakrvi; Integrated Security=True;";
+            string MyConString = "SERVER=127.0.0.1;" + "DATABASE=bankakrvi;" + "UID=root;" + "PASSWORD=root03102000;";
 
 
             if (txtIme.Text == "" || txtPrezime.Text == "" || txtDatum.Text == "" || cbKrvnaGrupa.SelectedIndex == -1)
@@ -41,25 +42,24 @@ namespace banka_krvi3
             }
             else
             {
+                MySqlConnection connection = new MySqlConnection(MyConString);
+                connection.Open();
 
-                using (SqlConnection sqlCon = new SqlConnection(connectionString))
-                {
-                    sqlCon.Open();
-                    SqlDataAdapter sqlDa;
+                string query = "insert into pacijent (Ime, Prezime, GodinaRodjenja, KrvnaGrupa) values ('" + txtIme.Text + "', '" + txtPrezime.Text + "', '" + txtDatum.Text + "', '" + cbKrvnaGrupa.Text + "' ) ";
+                MySqlCommand cmdSel = new MySqlCommand(query, connection);
+                var queryResult1 = cmdSel.ExecuteNonQuery();
+                connection.Close();
 
 
-                    sqlDa = new SqlDataAdapter("INSERT INTO pacijent (Ime,Prezime,KrvnaGrupa,GodinaRodjenja) VALUES ('" + txtIme.Text + "', '" + txtPrezime.Text + "','" + cbKrvnaGrupa.Text + "','" + txtDatum.Text + "')", sqlCon);
-                    DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);
-                    MessageBox.Show("Uspesna registrovanje", "Uspesno", MessageBoxButton.OK, MessageBoxImage.Information);
-                    txtIme.Text = "";
-                    txtPrezime.Text = "";
-                    cbKrvnaGrupa.SelectedIndex = -1;
-                    txtDatum.Text = "";
+                MessageBox.Show("Pacijent uspesno registrovan!");
 
-                }
+                txtIme.Text = "";
+                txtPrezime.Text = "";
+                txtDatum.Text = "";
+                cbKrvnaGrupa.SelectedIndex = -1;
+
             }
-        }
+            }
 
         private void Window_Closed(object sender, EventArgs e)
         {
@@ -67,4 +67,8 @@ namespace banka_krvi3
             GlavniOpcioniMeni.Show();
         }
     }
-}
+
+  
+    }
+
+
