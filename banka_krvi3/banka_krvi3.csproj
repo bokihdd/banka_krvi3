@@ -62,6 +62,9 @@
     <Compile Include="BrisanjeNaloga.xaml.cs">
       <DependentUpon>BrisanjeNaloga.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Donacija.xaml.cs">
+      <DependentUpon>Donacija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GlavniOpcioniMeni.xaml.cs">
       <DependentUpon>GlavniOpcioniMeni.xaml</DependentUpon>
     </Compile>
@@ -85,6 +88,10 @@
       <DependentUpon>RegistrovanjeRadnika.xaml</DependentUpon>
     </Compile>
     <Page Include="BrisanjeNaloga.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Donacija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -76,5 +76,12 @@ namespace banka_krvi3
             var PregledPacijenata = new PregledPacijenata();
             PregledPacijenata.Show();
         }
+
+        private void btnDonacija_Click(object sender, RoutedEventArgs e)
+        {
+            Donacija prozor = new Donacija();
+            this.Visibility = Visibility.Hidden;
+            prozor.Show();
+        }
     }
 }
